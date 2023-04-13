@@ -25,6 +25,7 @@ func _physics_process(delta):
 	# Move based on the velocity and snap to the ground.
 	# TODO: This information should be set to the CharacterBody properties instead of arguments: snap, Vector2.DOWN, Vector2.UP
 	# TODO: Rename velocity to linear_velocity in the rest of the script.
+	set_floor_snap_length(1.0)
 	move_and_slide()
 
 	# Check for jumping. is_on_floor() must be called after movement code.
